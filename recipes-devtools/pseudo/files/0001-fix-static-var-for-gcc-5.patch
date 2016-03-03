@@ -1,0 +1,11 @@
+--- a/pseudo_util.c	2016-03-03 21:18:48.237574245 +0300
++++ b/pseudo_util.c	2016-03-03 21:48:38.991984273 +0300
+@@ -98,7 +98,7 @@
+ int
+ pseudo_has_unload(char * const *envp) {
+ 	static const char unload[] = "PSEUDO_UNLOAD";
+-	static size_t unload_len = strlen(unload);
++	const size_t unload_len = strlen(unload);
+ 	size_t i = 0;
+ 
+ 	/* Is it in the caller environment? */
